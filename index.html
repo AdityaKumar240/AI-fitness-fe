@@ -1067,7 +1067,7 @@ function updateDashboard() {
 async function claude(messages, sys='') {
   const body = { model:'claude-sonnet-4-20250514', max_tokens:1000, messages };
   if (sys) body.system = sys;
-  const res = await fetch('https://ai-fitness-production-87f1.up.railway.app/api/claude', {
+  const res = await fetch('ai-fitness-production-321b.up.railway.app', {
     method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)
   });
   const d = await res.json();
